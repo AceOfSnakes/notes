@@ -100,12 +100,16 @@ pre {
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-a {
-  color: var(--color-fg-default);
+/* Header & Footer Navigation Links */
+.header-frame a,
+.floating-footer a {
+  color: var(--fgColor-default);
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
 }
-a:hover {
+.header-frame a:hover,
+.header-frame a:hover,
+.floating-footer a:hover {
   text-decoration: underline;
 }
