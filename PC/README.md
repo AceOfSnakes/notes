@@ -17,4 +17,5 @@
 |<a id="headphones"></a>**HyperX Cloud Alpha S** <br/>[Official page](https://row.hyperx.com/ru/products/hyperx-cloud-alpha-s?variant=40910061142221)|![Mouse](./images/hyperx-alpha-s-blk-240.png) |
 |<a id="pc-bd"></a>**ASUS SBW-06D5H-U** <br/>[Official page](https://www.asus.com/be-nl/motherboards-components/optical-drives/external-blu-ray-drive/sbw-06d5h-u/) | ![BD](./images/Asus-BD-240.png) |
 |<a id="printer"></a>**Printer Pantum M6550NW** <br/>[Official page](https://global.pantum.com/product-center/1517382966511185922.html)                | ![Printer](./images/pantum-240.png) |
+| **Synology DS223**<br/>[Official page](https://www.synology.com/en-us/products/DS223) |![NAS](./images/synology-ds223-240.png)|
 |||
