@@ -4,31 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Notes - Windows scripts - Ace Of Snakes</title>
+  <meta charset="UTF-8">
+  <title>Notes - Windows scripts - Ace Of Snakes</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown.min.css">
   <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
   <style>
     body { box-sizing: border-box; min-width: 200px; max-width: 100%; margin: 0 auto; padding: 45px; }
-    @media (max-width: 95%) { body { padding: 15px; } }
+    @media (max-width: 767px) { body { padding: 15px; } }
     pre { position: relative; }
-    .copy-btn { position: absolute; top: 6px; right: 6px; padding: 3px 8px; font-size: 12px; 
-                cursor: pointer; border-radius: 4px; border: 1px solid var(--color-border-default); 
-                background: var(--color-canvas-default); }
+    .copy-btn {
+      position: absolute; top: 6px; right: 6px; padding: 3px 8px; font-size: 12px;
+      cursor: pointer; border-radius: 4px; border: 1px solid var(--borderColor-default);
+      background: var(--bgColor-default); color: var(--fgColor-default);
+    }
+    .top-bar {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
     .avatar-frame {
-            border: 1px solid var(--color-border-default);
-            border-radius: 50%;
-            overflow: hidden;
-            width: 100px;
-            height: 100px;
-            margin-right: 24px;
-            flex-shrink: 0;
+      border: 1px solid var(--borderColor-default);
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+    }
+    .avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .header-frame {
+      flex: 1;
+    }
+    /* Optional: Make markdown lists in NOTES.md display horizontally as a menu */
+    .header-frame ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .header-frame li + li {
+      margin-top: 0;
     }
   </style>
 </head>
 <body class="markdown-body">
-  <div class="avatar-frame" style="vertical-align:top;"><img src="https://github.com/aceofsnakes.png" alt="Profile Avatar"></div>
-  <div id="notes">Loading notes.md...</div>
-  <h1>Windows scripts - Ace Of Snakes</h1>
-  <div id="content">Loading README.md...</div>
+  <div class="top-bar">
+    <div class="avatar-frame">
+      <img src="https://github.com/aceofsnakes.png" alt="Profile Avatar">
+    </div>
+    <nav id="notes" class="header-frame">Loading NOTES.md...</nav>
+  </div>
+  <div id="content"></div>
   <script>
     fetch('../NOTES.md')
       .then(r => r.text())
