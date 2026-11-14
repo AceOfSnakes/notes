@@ -15,5 +15,31 @@
 
 ## Autoscript
 
- - [Dump](Autoscript/dump.zip)   
- - [Telnet](Autoscript/telnet.zip)   
+ - [Dump](AutoScript/dump.zip) | [ASC](AutoScript/dump.zip.asc)
+ - [Telnet](AutoScript/telnet.zip) | [ASC](AutoScript/telnet.zip.asc)  
+
+### Verify archives
+Download zip and asc in one folder and run
+Linux
+```sh
+curl -fsSL https://aceofsnakes.github.io/aceofsnakes.gpg | gpg --dearmor > /tmp/ace.gpg
+for sig in *.zip.asc; do gpgv --keyring /tmp/ace.gpg "$sig" "${sig%.asc}"; done
+rm -f /tmp/ace.gpg
+```
+Windows
+```powershell
+curl.exe -fsSL https://aceofsnakes.github.io/aceofsnakes.gpg | gpg --dearmor > "$env:TEMP\ace.gpg"
+Get-ChildItem *.zip.asc | ForEach-Object { gpgv --keyring "$env:TEMP\ace.gpg" $_.Name $_.BaseName }
+Remove-Item "$env:TEMP\ace.gpg" -Force
+```
+
+```
+curl -fsSL https://aceofsnakes.github.io/aceofsnakes.gpg | gpg --dearmor > "%TEMP%\ace.gpg" && (for %F in (*.zip.asc) do gpgv --keyring "%TEMP%\ace.gpg" "%F" "%~nF") && del /f /q "%TEMP%\ace.gpg"
+```
+
+```cmd
+@echo off
+curl -fsSL https://aceofsnakes.github.io/aceofsnakes.gpg | gpg --dearmor > "%TEMP%\ace.gpg"
+for %%F in (*.zip.asc) do gpgv --keyring "%TEMP%\ace.gpg" "%%F" "%%~nF"
+del /f /q "%TEMP%\ace.gpg"
+```
