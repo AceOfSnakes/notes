@@ -1,4 +1,4 @@
-## OPPO UDP-203
+# OPPO UDP-203
 
 ## Links
 
@@ -18,10 +18,13 @@
  - [Dump](AutoScript/dump.zip) | [ASC](AutoScript/dump.zip.asc)
  - [Telnet](AutoScript/telnet.zip) | [ASC](AutoScript/telnet.zip.asc)  
 
-### Verify archives
-Download zip and asc in one folder and run
+# Verify archives
 
-On linux &#x1F427;
+Download any file and sign with .asc extension in one folder and run
+
+Bellow You can find samples for check signed .zip files
+
+## On linux &#x1F427;
 
 
 check.sh [Download / view](AutoScript/check.sh)
@@ -31,7 +34,7 @@ for sig in *.zip.asc; do gpgv --keyring /tmp/ace.gpg "$sig" "${sig%.asc}"; done
 rm -f /tmp/ace.gpg
 ```
 
-On Windows &#x229E;
+## On Windows &#x229E;
 
 check.ps1 [Download / view](AutoScript/check.ps1)
 
