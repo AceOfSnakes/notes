@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test scripts - Ace Of Snakes Repository</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+  <style>
+    body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
+    @media (max-width: 767px) { body { padding: 15px; } }
+    pre { position: relative; }
+    .copy-btn { position: absolute; top: 6px; right: 6px; padding: 3px 8px; font-size: 12px; cursor: pointer; border-radius: 4px; border: 1px solid #d0d7de; background: #f6f8fa; }
+    .avatar-frame {
+            border: 1px solid var(--color-border-default);
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            margin-right: 24px;
+            flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="markdown-body">
+  <div class="avatar-frame" style="vertical-align:top;"><img src="https://github.com/aceofsnakes.png" alt="Profile Avatar"></div>
+  <h1>Test scripts - Ace Of Snakes Repository</h1>
+  <div id="content">Loading README.md...</div>
+  <script>
+    fetch('README.md')
+      .then(r => r.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+        document.querySelectorAll('pre').forEach(pre => {
+          const btn = document.createElement('button');
+          btn.className = 'copy-btn';
+          btn.textContent = 'Copy';
+          btn.onclick = () => {
+            navigator.clipboard.writeText(pre.querySelector('code').innerText);
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 1500);
+          };
+          pre.appendChild(btn);
+        });
+      });
+  </script>
+</body>
+</html>

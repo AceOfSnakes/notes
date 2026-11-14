@@ -1,0 +1,5 @@
+Write-Output "SavePathToRegistryComponentGuid=$([guid]::NewGuid().ToString().ToUpper())"
+Write-Output "UpgradeCodeGuid=$([guid]::NewGuid().ToString().ToUpper())"
+Write-Output "ExecutableComponentGuid=$([guid]::NewGuid().ToString().ToUpper())"
+Write-Output "StartMenuShortcutComponentGuid=$([guid]::NewGuid().ToString().ToUpper())"
+Write-Output "DesktopShortcutComponentGuid=$([guid]::NewGuid().ToString().ToUpper())"
