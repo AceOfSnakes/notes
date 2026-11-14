@@ -15,10 +15,10 @@
 
 ## Autoscript
 
- - [Dump](AutoScript/dump.zip) | [ASC](AutoScript/dump.zip.asc)
- - [Telnet](AutoScript/telnet.zip) | [ASC](AutoScript/telnet.zip.asc)  
+ - [Dump](AutoScript/dump.zip) | [.ASC](AutoScript/dump.zip.asc)
+ - [Telnet](AutoScript/telnet.zip) | [.ASC](AutoScript/telnet.zip.asc)  
 
-# Verify archives
+# Verify files signed with .asc
 
 Download any file and sign with .asc extension in one folder and run
 
