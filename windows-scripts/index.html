@@ -30,7 +30,7 @@
   <h1>Windows scripts - Ace Of Snakes</h1>
   <div id="content">Loading README.md...</div>
   <script>
-    fetch('../README.md')
+    fetch('../NOTES.md')
       .then(r => r.text())
       .then(md => {
         document.getElementById('notes').innerHTML = marked.parse(md);
