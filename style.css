@@ -106,7 +106,6 @@ pre {
 .floating-footer a {
   color: var(--fgColor-muted);
   text-decoration: underline;
-  margin-left: 20px;
   font-weight: 500;
 }
 .markdown-body a:hover,
