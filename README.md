@@ -1,4 +1,4 @@
 ﻿# Notes
 
 ## [PC components](./PC/)
-## [Windos scripts](./windows-scripts/)
+## [Windows scripts](./windows-scripts/)
