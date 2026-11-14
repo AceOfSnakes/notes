@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../style.css">
   <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
 </head>
+
 <body class="markdown-body">
   <div class="top-bar">
     <div class="avatar-frame">
@@ -26,25 +28,26 @@
       .then(r => r.text())
       .then(md => {
         document.getElementById('notes').innerHTML = marked.parse(md);
-    });
-fetch('README.md')
-  .then(r => r.text())
-  .then(md => {
-    document.getElementById('content').innerHTML = marked.parse(md);
-    document.querySelectorAll('pre').forEach(pre => {
-      const btn = document.createElement('button');
-      btn.className = 'copy-btn';
-      btn.setAttribute('aria-label', 'Copy code');
-      btn.innerHTML = copyIcon;
+      });
+    fetch('README.md')
+      .then(r => r.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+        document.querySelectorAll('pre').forEach(pre => {
+          const btn = document.createElement('button');
+          btn.className = 'copy-btn';
+          btn.setAttribute('aria-label', 'Copy code');
+          btn.innerHTML = copyIcon;
 
-      btn.onclick = () => {
-        navigator.clipboard.writeText(pre.querySelector('code').innerText);
-        btn.innerHTML = checkIcon;
-        setTimeout(() => btn.innerHTML = copyIcon, 1500);
-      };
+          btn.onclick = () => {
+            navigator.clipboard.writeText(pre.querySelector('code').innerText);
+            btn.innerHTML = checkIcon;
+            setTimeout(() => btn.innerHTML = copyIcon, 1500);
+          };
 
-      pre.appendChild(btn);
-    });
-  });  </script>
+          pre.appendChild(btn);
+        });
+      });  </script>
 </body>
+
 </html>
