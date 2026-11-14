@@ -9,10 +9,10 @@ Windows toolset for build some 3rd party libraries for Win32, Win64 and Arm64
 apr             | 1.7.6   |`cmake_matrix apr`         | ✅          | ✅         | ✅         |                              | ✅     | ✅ | ✅ 
 apr-iconv       | 1.2.2   |                           |           | 
 apr-util        | 1.6.5   |                           |           |          |          |                               |        |                | |apr openssl pcre2
-expat           | 2.9.0   |`cmake_matrix shared expat`| ✅          | ✅         | ✅         | `cmake_matrix static expat`    | ✅     | ✅ | ✅
+expat           | 2.10.0  |`cmake_matrix shared expat`| ✅          | ✅         | ✅         | `cmake_matrix static expat`    | ✅     | ✅ | ✅
 ffmpeg          | 9.0.2   |`ffmpeg_matrix.cmd`        | ✅          | ✅         | ✅         |                                | ✅     | ✅ | ✅
 icu             | 78.3    |                           |           |          | 
-openssl         | 3.5.8   |`openssl_matrix.cmd`       | ✅          | ✅         | ✅        |                                | ✅     | ✅  | ✅
+openssl         | 3.5.9   |`openssl_matrix.cmd`       | ✅          | ✅         | ✅        |                                | ✅     | ✅  | ✅
 pcre2           | 10.49   |`cmake_matrix shared pcre2`| ✅          | ✅         | ✅         | `cmake_matrix static pcre2`    | ✅     | ✅ | ✅
 putty           | 0.85    |                           |              |            |             |`cmake_matrix static putty`     | ✅     | ✅ | ✅
 qt 5            | 5.15.19 |`qt_matrix.cmd qt5 shared` | ✅          | ✅         | ✅         | `qt_matrix.cmd qt6 static`     | ✅     | ✅| ✅
