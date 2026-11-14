@@ -8,7 +8,7 @@ Windows toolset for build some 3rd party libraries for Win32, Win64 and Arm64
 |               |         | script                    | x86         | x64         | arm64       |script                        | x86    | x64  | arm64 | 
 apr             | 1.7.6   |`cmake_matrix apr`         | ✅          | ✅         | ✅         |                              | ✅     | ✅ | ✅ 
 apr-iconv       | 1.2.2   |                           |           | 
-apr-util        | 1.6.5   |                           |           |          |          |                               |        |                | |apr openssl pcre2
+apr-util        | 1.6.5   |`cmake_matrix shared apr-util` | ✅          | ✅         | ✅     |                          |        |                | |   apr openssl pcre2
 expat           | 2.10.0  |`cmake_matrix shared expat`| ✅          | ✅         | ✅         | `cmake_matrix static expat`    | ✅     | ✅ | ✅
 ffmpeg          | 9.0.2   |`ffmpeg_matrix.cmd`        | ✅          | ✅         | ✅         |                                | ✅     | ✅ | ✅
 icu             | 78.3    |                           |           |          | 
