@@ -101,6 +101,7 @@ pre {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 /* Header & Footer Navigation Links */
+.markdown-body a,
 .header-frame a,
 .floating-footer a {
   color: var(--fgColor-default);
@@ -108,6 +109,7 @@ pre {
   margin-left: 20px;
   font-weight: 500;
 }
+.markdown-body a:hover,
 .header-frame a:hover,
 .header-frame a:hover,
 .floating-footer a:hover {
