@@ -105,7 +105,7 @@ pre {
 .header-frame a,
 .floating-footer a {
   color: var(--fgColor-default);
-  text-decoration: none;
+  text-decoration: underline;
   margin-left: 20px;
   font-weight: 500;
 }
