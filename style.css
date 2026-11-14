@@ -49,8 +49,8 @@ pre {
   border: 1px solid var(--borderColor-default);
   border-radius: 50%;
   overflow: hidden;
-  width: 56px;
-  height: 56px;
+  width: 112px;
+  height: 112px;
   flex-shrink: 0;
 }
 
