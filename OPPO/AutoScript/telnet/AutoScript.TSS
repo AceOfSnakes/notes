@@ -1,0 +1,17 @@
+#MTKAT 0.xx script
+
+CLI(CLI_exec echo root::0:0:root,,,:/root:/bin/sh >/etc/passwd)
+CLI(CLI_exec echo system::100:100:user,,,::/bin/sh >>/etc/passwd)
+CLI(CLI_exec cp /mnt/sda1/AutoScript/services /etc/)
+CLI(CLI_exec /usr/sbin/inetd & )
+#CLI(CLI_exec /usr/sbin/telnetd & )
+#CLI(CLI_exec /bin/mount -t vfat > /tmp/mount)
+
+#CLI(CLI_exec echo '`find /mnt/sd* -maxdepth 0`/AutoScript/dump.sh' > /tmp/dump )
+#CLI(CLI_exec chmod +x /tmp/dump )
+#CLI(CLI_exec sync )
+#CLI(CLI_exec /tmp/dump )
+
+CLI(CLI_exec sync)
+CLI(CLI_exec sync)
+CLI(CLI_drv.ir.rx.sq 0xaf000)
