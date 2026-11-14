@@ -67,7 +67,7 @@
       .then(md => {
         document.getElementById('notes').innerHTML = marked.parse(md);
     });
-    fetch('README.md')
+    fetch('CODES.md')
       .then(r => r.text())
       .then(md => {
         document.getElementById('content').innerHTML = marked.parse(md);
