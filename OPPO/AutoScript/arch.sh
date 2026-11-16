@@ -22,7 +22,8 @@ for dir in */; do
     echo "Zipping $folder_name into $INNER_DIR/$folder_name inside $archive..."
     (unix2dos $stage_dir/$INNER_DIR/$INNER_DIR*)
     (chmod -x $stage_dir/$INNER_DIR/$INNER_DIR*)
-    (cd "$stage_dir" && zip -rq "$archive" "$INNER_DIR")
+    find "$stage_dir/$INNER_DIR" -exec touch -t 202601010000.00 {} +
+    (cd "$stage_dir" && find "$INNER_DIR" | LC_ALL=C sort | zip -Xq "$archive" -@)
     rm -rf "$stage_dir"
     
     echo "Signing $archive..."
