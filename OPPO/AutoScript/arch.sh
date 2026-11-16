@@ -21,6 +21,7 @@ for dir in */; do
 
     echo "Zipping $folder_name into $INNER_DIR/$folder_name inside $archive..."
     (unix2dos $stage_dir/$INNER_DIR/$INNER_DIR*)
+    (chmod -x $stage_dir/$INNER_DIR/$INNER_DIR*)
     (cd "$stage_dir" && zip -rq "$archive" "$INNER_DIR")
     rm -rf "$stage_dir"
     

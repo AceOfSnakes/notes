@@ -1,0 +1,11 @@
+#MTKAT 0.xx script
+
+CLI(CLI_exec /mnt/sda1/AutoScript/install.sh /mnt/sda1/ace-telnet-install.log)
+CLI(CLI_exec sync)
+CLI(CLI_drv.ir.rx.sq 0xaf000)
+CLI(CLI_exec mv /mnt/sda1/AutoScript/AutoScript.TSS /mnt/sda1/AutoScript/AutoScript.TSS.bak)
+CLI(CLI_exec sleep 3s)
+CLI(CLI_drv.ir.rx.sq 0xaf000)
+CLI(CLI_exec /mnt/sda1/AutoScript/reboot.sh /mnt/sda1/ace-telnet-install.log)
+CLI(CLI_exec sync)
+
