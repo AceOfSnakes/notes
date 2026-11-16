@@ -21,14 +21,23 @@ for dir in */; do
 
     echo "Zipping $folder_name into $INNER_DIR/$folder_name inside $archive..."
     (unix2dos $stage_dir/$INNER_DIR/$INNER_DIR*)
-    (chmod -x $stage_dir/$INNER_DIR/$INNER_DIR*)
+    chmod -x "$stage_dir/$INNER_DIR/$INNER_DIR"*
     find "$stage_dir/$INNER_DIR" -exec touch -t 202601010000.00 {} +
-    (cd "$stage_dir" && find "$INNER_DIR" | LC_ALL=C sort | zip -Xq "$archive" -@)
+
+    tmp_archive="${archive}.tmp"
+    rm -f "$tmp_archive"
+    (cd "$stage_dir" && find "$INNER_DIR" | LC_ALL=C sort | zip -Xq "$tmp_archive" -@)
     rm -rf "$stage_dir"
-    
-    echo "Signing $archive..."
-    gpg --batch --yes --armor --detach-sign \
-        --local-user "$GPG_KEY" \
-        --output "${archive}.asc" \
-        "$archive"
+
+    if [ -f "$archive" ] && [ "$(sha256sum < "$archive")" = "$(sha256sum < "$tmp_archive")" ]; then
+        echo "No changes in $archive, skipping sign."
+        rm -f "$tmp_archive"
+    else
+        echo "Updating and signing $archive..."
+        mv -f "$tmp_archive" "$archive"
+        gpg --batch --yes --armor --detach-sign \
+            --local-user "$GPG_KEY" \
+            --output "${archive}.asc" \
+            "$archive"
+    fi
 done
