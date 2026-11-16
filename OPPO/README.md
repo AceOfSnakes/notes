@@ -15,7 +15,10 @@
 
 ## Autoscript
 
- - [Dump](AutoScript/dump.zip) | [.ASC](AutoScript/dump.zip.asc)
- - [Telnet](AutoScript/telnet.zip) | [.ASC](AutoScript/telnet.zip.asc)  
-
+ - [dump](AutoScript/dump.zip) | [.asc](AutoScript/dump.zip.asc)
+ - [telnet](AutoScript/telnet.zip) | [.asc](AutoScript/telnet.zip.asc)
+ - [oppo-dv-mkv telnet extra](AutoScript/oppo-dv-mkv-extra-telnet-uninstall.zip) | [.asc](AutoScript/oppo-dv-mkv-extra-telnet.zip.asc)
+ - [oppo-dv-mkv telnet extra uninstall](AutoScript/oppo-dv-mkv-extra-telnet-uninstall.zip) | [.asc](AutoScript/oppo-dv-mkv-extra-telnet-uninstall.zip.asc)
+ - [oppo-dv-mkv install with reboot](AutoScript/oppo-dv-mkv-install-with-reboot.zip) | [.asc](AutoScript/oppo-dv-mkv-install-with-reboot.zip.asc)
+  
 ### [Verify files signed with .asc](/sign.html)
